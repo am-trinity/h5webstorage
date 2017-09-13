@@ -8,16 +8,21 @@ import { StorageOptions } from './storage-options';
  * Makes the  LocalStorage and SessionStorage objects available throught the application. Should be
  * added to the RootModule imports list.
  */
-@NgModule({
-	providers: [
-		LocalStorageService, SessionStorageService,
-		{ provide: LOCAL_STORAGE_OBJECT, useValue: localStorage },
-		{ provide: SESSION_STORAGE_OBJECT, useValue: sessionStorage },
-		{ provide: SERDES_OBJECT, useValue: { stringify: JSON.stringify, parse: JSON.parse } }, 
-		ConfigureStorage({ prefix: '' })
-	]
-})
-export class WebStorageModule { }
+@NgModule({})
+export class WebStorageModule {
+	static forRoot() {
+		return {
+			ngModule: WebStorageModule,
+			providers: [
+				LocalStorageService, SessionStorageService,
+				{ provide: LOCAL_STORAGE_OBJECT, useValue: localStorage },
+				{ provide: SESSION_STORAGE_OBJECT, useValue: sessionStorage },
+				{ provide: SERDES_OBJECT, useValue: { stringify: JSON.stringify, parse: JSON.parse } },
+				ConfigureStorage({ prefix: '' })
+			]
+	};
+	}
+}
 
 /**
  * Creates a provider for the StorageOptions
