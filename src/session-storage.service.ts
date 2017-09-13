@@ -1,5 +1,6 @@
 import { Inject, Injectable, Optional, OpaqueToken, NgZone } from '@angular/core';
-import { BaseStorageService, StorageOptions, STORAGE_OPTIONS, SERDES_OBJECT } from './base-storage.service';
+import { BaseStorageService, STORAGE_OPTIONS, SERDES_OBJECT } from './base-storage.service';
+import { StorageOptions } from './storage-options';
 
 /**
  * Token used to inject an object as the storage backend of the SessionStorage object. By default, the storage
