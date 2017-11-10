@@ -1,6 +1,5 @@
 # h5webstorage [![npm version][]][nvl] [![Build Status][]][bsl] [![Test Coverage][]][tcl] [![Code Climate][]][ccl] 
 #### Html5 WebStorage API for Angular2
-[![Sauce Test Status](https://saucelabs.com/browser-matrix/SirDarquan.svg)](https://saucelabs.com/u/SirDarquan)
 - [Use](#use)
 - [Overview](#overview)
   - [LocalStorage](#localstorage) (service)
