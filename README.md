@@ -1,4 +1,4 @@
-# h5webstorage [![npm version][]][nvl] [![Build Status][]][bsl] [![Test Coverage][]][tcl] [![Code Climate][]][ccl] 
+# h5webstorage
 #### Html5 WebStorage API for Angular2
 - [Use](#use)
 - [Overview](#overview)
